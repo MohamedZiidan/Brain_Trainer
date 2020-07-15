@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+    // Start Button Method
     public void goButton(View view) {
         goButton.setVisibility(View.INVISIBLE);
         gameConstraint.setVisibility(View.VISIBLE);
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    // A Method of 4 Button of Answers
     public void chooseAnswer(View view) {
 
         if (positionOfCorrectAnswer == Integer.parseInt(view.getTag().toString())) {
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //On create Method
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // A method of generating a game over & over
     public void generateGame() {
 
         Random rand = new Random();
@@ -133,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Play Again Button to restart a game
     public void playAgain(View view) {
 
         timerText.setText("30s");
